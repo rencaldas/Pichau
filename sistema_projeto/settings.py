@@ -42,7 +42,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'widget_tweaks',
     'sistema_projeto.pets',
+    'sistema_projeto.contas',
 ]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

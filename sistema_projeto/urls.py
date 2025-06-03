@@ -5,10 +5,10 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('sistema_projeto.pets.urls')),  # Caminho da sua app
+    path('', include('sistema_projeto.pets.urls')),  
+    path('contas/', include('sistema_projeto.contas.urls')),         
 ]
 
-# Para servir arquivos estáticos e de mídia em modo DEBUG
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
