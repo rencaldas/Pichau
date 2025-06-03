@@ -44,3 +44,8 @@ def remover_pet(request, pet_id):
         pet.delete()
         return redirect('listar_pets')
     return render(request, 'remover_pet.html', {'pet': pet})
+
+def pet_detalhe(request, pet_id):
+    pet = get_object_or_404(Pet, id=pet_id)
+    return render(request, 'pets/pet_detalhe.html', {'pet': pet})
+
